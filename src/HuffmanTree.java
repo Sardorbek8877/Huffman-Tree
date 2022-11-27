@@ -46,4 +46,26 @@ public class HuffmanTree {
             throw new IllegalStateException();
         }
     }
+
+    public void generateCodes(){
+        if( !isEmpty() && !isLeaf() ){
+            leftChild.content.setCode(content.getCode() + "0");
+            rightChild.content.setCode(content.getCode() + "1");
+            leftChild.generateCodes();
+            rightChild.generateCodes();
+
+        }
+    }
+
+    public void showCodes(){
+        if ( !isEmpty() ){
+            if ( !isLeaf() ){
+                System.out.println( content.toString() );
+            }
+            else {
+                leftChild.showCodes();
+                rightChild.showCodes();
+            }
+        }
+    }
 }
