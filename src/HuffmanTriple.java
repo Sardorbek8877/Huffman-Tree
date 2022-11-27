@@ -17,4 +17,32 @@ public class HuffmanTriple {
     public HuffmanTriple(){
         this(' ', 0);
     }
+
+    public char getToken(){
+        return token;
+    }
+
+    public String getCode(){
+        return code;
+    }
+
+    public int getQuantity(){
+        return quantity;
+    }
+
+    public void setCode( String c ){
+        code = c;
+    }
+
+    public void incrementQuantity(){
+        quantity++;
+    }
+
+    public int compareTo( HuffmanTriple other ){
+        return quantity - other.quantity;
+    }
+
+    public String toString(){
+        return "token (quantity: " + quantity + "): " + token + " -> code: " + code;
+    }
 }
