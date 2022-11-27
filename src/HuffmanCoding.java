@@ -35,7 +35,7 @@ public class HuffmanCoding {
     }
 
     private void shiftTrees( int start ){
-        if (start > trees.length){
+        if (start < trees.length){
             HuffmanTree toInsert = trees[start];
             int i = start;
             while ( i>0 && trees[i-1].compareTo( toInsert )>0 ){

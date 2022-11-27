@@ -59,7 +59,7 @@ public class HuffmanTree {
 
     public void showCodes(){
         if ( !isEmpty() ){
-            if ( !isLeaf() ){
+            if ( isLeaf() ){
                 System.out.println( content.toString() );
             }
             else {
